@@ -15,12 +15,12 @@ export async function onRequestGet(context) {
           }
           })
         const response = await res.json()
-        const PROGRAMS = response.web_playlist.map((playlist) => {
+        const PROGRAMS = response.web_group.map((chapter) => {
             return {
-                '@id': 'https://' + request.headers.get('host') + '/api/tv/playlist/' + playlist.ID,
+                '@id': 'https://' + request.headers.get('host') + '/api/tv/chapters/' + chapter.ID,
                 '@type': 'TV program',
-                'title': playlist.NAME,
-                'description': playlist.SHORT_DESC
+                'title': chapter.NAME,
+                'description': chapter.SHORT_DESC
           }})
         const result = {
             "@context": "http://www.w3.org/ns/hydra/context.jsonld",
