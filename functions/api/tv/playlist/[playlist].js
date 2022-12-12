@@ -8,7 +8,7 @@ export async function onRequestGet(context) {
       data, // arbitrary space for passing data between middlewares
     } = context;
 
-        let res = await fetch("https://mam.eitb.eus/mam/REST/ServiceMultiweb/Grouplist/Clasification/MULTIWEBTV/8/" + context.params.category, {
+        let res = await fetch("https://mam.eitb.eus/mam/REST/ServiceMultiweb/Grouplist/Clasification/MULTIWEBTV/8/" + context.params.playlist, {
           method: "GET",
           headers: {
             'Content-Type': 'application/json'
