@@ -37,7 +37,8 @@ export async function onRequestGet(context) {
           <li><a href="/api/radios/chapter/9040061">Emisio konkretu bat (adb. Dida! 2022/12/09)</a></li>
           <li><a href="/api/tv">Telebista programa kategoriak</a></li>
           <li><a href="/api/tv/category/PELICULAS">Kategoria bateko programak (adb. Pelikulak)</a></li>
-          <li><a href="/api/tv/playlist/4621">Programa atalak (adb. Gaur egun)</a></li>
+          <li><a href="/api/tv/playlist/4621">Programa zerrendak (adb. Gaur egun)</a></li>
+          <li><a href="/api/tv/chapters/7285">TV programa atalak (adb. Gaur egun 2022/12/12 )</a></li>
           </ul>
         </body>`
         
