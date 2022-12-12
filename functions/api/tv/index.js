@@ -17,7 +17,7 @@ export async function onRequestGet(context) {
           
         const CATEGORIES = response.web_clasif.map((category) => {
             return {
-            '@id': 'https://' + request.headers.get('host') + '/api/tv/' + category.id,
+            '@id': 'https://' + request.headers.get('host') + '/api/tv/' + category.ID_WEB_CLASIF,
             '@type': 'TV Category list',
             'parent': 'https://' + request.headers.get('host') + '/api/tv',
             'title': category.CLASIFICACION_EU,
