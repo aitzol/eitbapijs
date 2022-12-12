@@ -21,7 +21,7 @@ export async function onRequestGet(context) {
             '@type': 'TV Category list',
             'parent': 'https://' + request.headers.get('host') + '/api/tv',
             'title': category.CLASIFICACION_EU,
-            'title_es': category.CLASiFICACION_ES,
+            'title_es': category.CLASIFICACION_ES,
             'title_en': category.CLASIFICACION_EN
             }
         })
