@@ -17,7 +17,7 @@ export async function onRequestGet(context) {
         const response = await res.json()
         const PROGRAMS = response.web_media.map((emission) => {
             return {
-                '@id': 'https://' + request.headers.get('host') + '/api/tv/emission/' + emission.ID,
+                '@id': 'https://' + request.headers.get('host') + '/api/tv/emissions/' + emission.ID,
                 '@type': 'TV program',
                 'title': emission.NAME_EU,
                 'description': emission.SHORT_DESC_EU
