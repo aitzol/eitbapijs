@@ -8,14 +8,14 @@ export async function onRequestGet(context) {
       data, // arbitrary space for passing data between middlewares
     } = context;
 
-        let res = await fetch("https://mam.eitb.eus/mam/REST/ServiceMultiweb/Grouplist/ByGroup/MULTIWEBTV/8" + context.params.playlist, {
+        let res = await fetch("https://mam.eitb.eus/mam/REST/ServiceMultiweb/Grouplist/ByGroup/MULTIWEBTV/8/" + context.params.playlist, {
           method: "GET",
           headers: {
             'Content-Type': 'application/json'
           }
           })
         const response = await res.json()
-        const PROGRAMS = response.web_group.map((chapter) => {
+        const PROGRAMS = response.web_group.web_playlist.map((chapter) => {
             return {
                 '@id': 'https://' + request.headers.get('host') + '/api/tv/chapters/' + chapter.ID,
                 '@type': 'TV program',
