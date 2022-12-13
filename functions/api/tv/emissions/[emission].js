@@ -20,10 +20,10 @@ export async function onRequestGet(context) {
             'height': item.FRAME_HEIGHT,
             'encoding_rate': item.ENCODING_RATE,
             'url': item.PMD_URL,
-            'name': data.name,
+            'name': response.name,
             'still_url': group.STILL_URL,
             'thumbnail_url': group.THUMBNAIL_URL,
-            'brodacast_date': group.BROADCAST_DATE, 
+            'brodacast_date': group.BROADCST_DATE, 
             'channel': group.BROADCAST_CHANNEL
           }})).flat()
         const result = {
