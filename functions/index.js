@@ -28,6 +28,8 @@ export async function onRequestGet(context) {
           <li><a href="https://mastodon.eus/@xezpeleta/109474128828441267">Mastodonen</a></li>
           </ul>
           </p>
+	  <p>
+	  Adibideak
           <ul>
           <li><a href="/api">Media</a></li>
           <li><a href="/api/radios">Irratiak</a></li>
@@ -41,6 +43,7 @@ export async function onRequestGet(context) {
           <li><a href="/api/tv/chapters/7285">TV programa atalak (adb. Gaur egun 2022/12/12 )</a></li>
           <li><a href="/api/tv/emissions/210800">Emisio bat (adb. Gaur egun 2022/12/12 14:00)</a></li>
           </ul>
+	  </p>
         </body>`
         
         return new Response(html , {
