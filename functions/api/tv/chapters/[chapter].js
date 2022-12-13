@@ -20,7 +20,7 @@ export async function onRequestGet(context) {
                 '@id': 'https://' + request.headers.get('host') + '/api/tv/emission/' + emission.ID,
                 '@type': 'TV program',
                 'title': emission.NAME_EU,
-                'description': playlist.SHORT_DESC_EU
+                'description': emission.SHORT_DESC_EU
           }})
         const result = {
             "@context": "http://www.w3.org/ns/hydra/context.jsonld",
