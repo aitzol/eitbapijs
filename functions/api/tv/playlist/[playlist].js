@@ -15,13 +15,16 @@ export async function onRequestGet(context) {
           }
           })
         const response = await res.json()
-        const PROGRAMS = response.web_group.web_playlist.map((chapter) => {
-            return {
-                '@id': 'https://' + request.headers.get('host') + '/api/tv/chapters/' + chapter.ID,
-                '@type': 'TV program',
-                'title': chapter.NAME,
-                'description': chapter.SHORT_DESC
-          }})
+        const PROGRAMS = response.web_group.map(group => 
+            group.web_playlist.map(chapter => 
+                {
+                    return {
+                    '@id': 'https://' + request.headers.get('host') + '/api/tv/chapters/' + chapter.ID,
+                    '@type': 'TV program',
+                    'title': chapter.NAME,
+                    'description': chapter.SHORT_DESC
+                 }})).flat()
+        
         const result = {
             "@context": "http://www.w3.org/ns/hydra/context.jsonld",
             "@id": 'https://' + request.headers.get('host') + '/api/category/' + context.params.category,
