@@ -39,6 +39,7 @@ export async function onRequestGet(context) {
           <li><a href="/api/tv/category/PELICULAS">Kategoria bateko programak (adb. Pelikulak)</a></li>
           <li><a href="/api/tv/playlist/4621">Programa zerrendak (adb. Gaur egun)</a></li>
           <li><a href="/api/tv/chapters/7285">TV programa atalak (adb. Gaur egun 2022/12/12 )</a></li>
+          <li><a href="/api/tv/emissions/210800">Emisio bat (adb. Gaur egun 2022/12/12 14:00)</a></li>
           </ul>
         </body>`
         
